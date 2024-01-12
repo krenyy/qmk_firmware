@@ -234,4 +234,7 @@ fi
 
 # Global install tasks
 install_bootloadhid
-pip3 install --user -r ${util_dir}/../requirements.txt
+python -m venv ${util_dir}/.venv
+. ${util_dir}/.venv/bin/activate
+pip3 install -r ${util_dir}/../requirements.txt
+echo "DONT FORGET TO SOURCE THE VENV!!!"
